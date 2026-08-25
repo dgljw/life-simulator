@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "public": true,
-  "name": "life-simulator-dgljw",
   "cleanUrls": true,
   "regions": ["hkg1"],
   "builds": [
