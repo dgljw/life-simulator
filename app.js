@@ -220,12 +220,12 @@
     let html = `<div class="stat-grid" id="stat-grid"></div>
       <div class="year-card">
         <div class="year-head">
-          <span class="year-age">🎂 ${age} 岁</span>
-          <span class="year-tag">${stage.tag} · ${stage.name}</span>
+          <span class="year-age">${age} 岁</span>
+          <span class="year-tag">${stage.name}</span>
         </div>
         <div class="event-text">${renderRecentLog()}</div>
-        <div class="continue-row" style="text-align:center;margin-top:14px">
-          <button id="btn-next" class="btn btn-primary">${age >= 40 ? "步入下一年 ➜" : "继续长大 ➜"}</button>
+        <div class="continue-row">
+          <button id="btn-next" class="btn btn-primary">${age >= 40 ? "步入下一年" : "继续长大"}</button>
         </div>
       </div>`;
     main.innerHTML = html;
@@ -242,7 +242,7 @@
   function renderRecentLog() {
     // 显示最近 1-2 条日志
     const recent = state.log.slice(-2);
-    if (recent.length === 0) return `你出生了，一个崭新的生命睁开了眼睛。`;
+    if (recent.length === 0) return `你出生了。`;
     return recent.map((l) => escapeHtml(l.text) + deltaHtml(l.deltas)).join("<br/><br/>");
   }
 
