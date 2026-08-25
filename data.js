@@ -10,12 +10,12 @@ const LIFE = {};
 
 // ---- 统计属性定义 ----
 LIFE.STATS = [
-  { key: "iq",     name: "智力", icon: "🧠", color: "#8b7bff", max: 100, init: 50 },
-  { key: "eq",     name: "情商", icon: "💬", color: "#4fd3ff", max: 100, init: 50 },
-  { key: "health", name: "体质", icon: "💪", color: "#5dd39e", max: 100, init: 60 },
-  { key: "looks",  name: "颜值", icon: "🌟", color: "#f6a5c0", max: 100, init: 50 },
-  { key: "wealth", name: "财富", icon: "💰", color: "#f6c453", max: 100, init: 30 },
-  { key: "happy",  name: "幸福", icon: "😄", color: "#ffd166", max: 100, init: 60 },
+  { key: "iq",     name: "智力", icon: "🧠", color: "#6d7fd4", max: 100, init: 50 },
+  { key: "eq",     name: "情商", icon: "🤝", color: "#4fa3a5", max: 100, init: 50 },
+  { key: "health", name: "体质", icon: "💪", color: "#6aa84f", max: 100, init: 60 },
+  { key: "looks",  name: "颜值", icon: "✨", color: "#d98ba1", max: 100, init: 50 },
+  { key: "wealth", name: "财富", icon: "💰", color: "#c9903d", max: 100, init: 30 },
+  { key: "happy",  name: "幸福", icon: "🙂", color: "#e0a04a", max: 100, init: 60 },
 ];
 
 LIFE.STAT_BY_KEY = {};
