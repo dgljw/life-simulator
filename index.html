@@ -12,11 +12,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
 <body>
-  <div id="bg-stars" aria-hidden="true"></div>
   <div class="container">
     <header class="site-header">
       <div class="logo">
-        <span class="logo-emoji">🌱</span>
         <h1>人生模拟器</h1>
       </div>
       <div class="header-sub">Life Simulator</div>
@@ -25,57 +23,56 @@
     <!-- 开始界面 -->
     <section id="screen-start" class="screen active">
       <div class="card start-card">
-        <div class="card-glow"></div>
-        <h2 class="start-title">选择你的开局</h2>
-        <p class="start-desc">你将从零开始，经历一段真实又充满奇遇的人生。</p>
+        <h2 class="start-title">开始一段人生</h2>
+        <p class="start-desc">从出生到终老，每一步选择都会改变你的故事。</p>
 
         <div class="field">
           <label class="field-label" for="inp-name">姓名</label>
-          <input id="inp-name" class="input" type="text" maxlength="12" placeholder="输入你的名字（可留空随机）" autocomplete="off" />
+          <input id="inp-name" class="input" type="text" maxlength="12" placeholder="留空则随机生成" autocomplete="off" />
         </div>
 
         <div class="field">
           <label class="field-label">性别</label>
           <div class="seg" id="seg-gender">
-            <button class="seg-btn" data-value="male">👦 男</button>
-            <button class="seg-btn" data-value="female">👧 女</button>
-            <button class="seg-btn" data-value="random">🎲 随机</button>
+            <button class="seg-btn" data-value="male">男</button>
+            <button class="seg-btn" data-value="female">女</button>
+            <button class="seg-btn" data-value="random">随机</button>
           </div>
         </div>
 
         <div class="field">
           <label class="field-label">初始家庭背景</label>
           <div class="seg wide" id="seg-family">
-            <button class="seg-btn" data-value="poor">🛖 贫寒</button>
-            <button class="seg-btn" data-value="normal">🏡 普通</button>
-            <button class="seg-btn" data-value="rich">🏰 富裕</button>
-            <button class="seg-btn" data-value="random">🎲 随机</button>
+            <button class="seg-btn" data-value="poor">贫寒</button>
+            <button class="seg-btn" data-value="normal">普通</button>
+            <button class="seg-btn" data-value="rich">富裕</button>
+            <button class="seg-btn" data-value="random">随机</button>
           </div>
         </div>
 
         <div class="field">
-          <label class="field-label">分配天赋点 <span id="pts-info" class="badge-big">0</span></label>
+          <label class="field-label">天赋点 <span id="pts-info" class="badge-big">0</span></label>
           <div class="stat-alloc">
             <div class="alloc-row" data-stat="iq">
-              <span class="alloc-name">🧠 智力</span>
+              <span class="alloc-name">智力</span>
               <button class="alloc-btn minus" data-stat="iq">−</button>
               <span class="alloc-val" id="alloc-iq">3</span>
               <button class="alloc-btn plus" data-stat="iq">＋</button>
             </div>
             <div class="alloc-row" data-stat="eq">
-              <span class="alloc-name">💬 情商</span>
+              <span class="alloc-name">情商</span>
               <button class="alloc-btn minus" data-stat="eq">−</button>
               <span class="alloc-val" id="alloc-eq">3</span>
               <button class="alloc-btn plus" data-stat="eq">＋</button>
             </div>
             <div class="alloc-row" data-stat="health">
-              <span class="alloc-name">💪 体质</span>
+              <span class="alloc-name">体质</span>
               <button class="alloc-btn minus" data-stat="health">−</button>
               <span class="alloc-val" id="alloc-health">3</span>
               <button class="alloc-btn plus" data-stat="health">＋</button>
             </div>
             <div class="alloc-row" data-stat="looks">
-              <span class="alloc-name">🌟 颜值</span>
+              <span class="alloc-name">颜值</span>
               <button class="alloc-btn minus" data-stat="looks">−</button>
               <span class="alloc-val" id="alloc-looks">3</span>
               <button class="alloc-btn plus" data-stat="looks">＋</button>
@@ -111,7 +108,7 @@
         </div>
         <div id="end-report" class="end-report"></div>
         <div class="end-actions">
-          <button id="btn-again" class="btn btn-primary">🔁 再来一世</button>
+          <button id="btn-again" class="btn btn-primary">再来一世</button>
         </div>
       </div>
     </section>
@@ -120,7 +117,7 @@
   <!-- 事件弹窗 -->
   <div id="modal" class="modal" hidden>
     <div class="modal-card">
-      <div class="modal-emoji" id="modal-emoji">📜</div>
+      <div class="modal-emoji" id="modal-emoji"></div>
       <div class="modal-title" id="modal-title"></div>
       <div class="modal-body" id="modal-body"></div>
       <div class="modal-choices" id="modal-choices"></div>
